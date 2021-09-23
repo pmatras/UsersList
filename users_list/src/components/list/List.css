@@ -1,0 +1,7 @@
+ol {
+  color: #63625c;
+}
+
+li + li {
+  margin-top: 10px;
+}
