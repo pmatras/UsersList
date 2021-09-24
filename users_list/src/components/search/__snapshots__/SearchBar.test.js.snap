@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchBar component tests matches snapshot with empty value 1`] = `
+<div>
+  <input
+    className="search-bar"
+    data-testid="search-bar"
+    onChange={[Function]}
+    placeholder="Search..."
+    type="search"
+    value=""
+  />
+</div>
+`;
+
+exports[`SearchBar component tests matches snapshot with provided value 1`] = `
+<div>
+  <input
+    className="search-bar"
+    data-testid="search-bar"
+    onChange={[Function]}
+    placeholder="Search..."
+    type="search"
+    value="Example query"
+  />
+</div>
+`;

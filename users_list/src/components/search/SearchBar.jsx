@@ -12,6 +12,7 @@ const SearchBar = ({ value, onQueryChange, placeholder = 'Search...' }) => {
         placeholder={placeholder}
         value={value}
         onChange={onQueryChange}
+        data-testid='search-bar'
       />
     </div>
   );
