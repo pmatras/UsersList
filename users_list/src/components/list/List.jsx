@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 
 import './List.css';
 
+const defaultRenderFunction = (item) => <span>{JSON.stringify(item)}</span>;
+
 const List = ({
   items,
   noItemsMsg = 'No elements',
@@ -13,7 +15,9 @@ const List = ({
     <div>
       <ol>
         {items.map((item) => (
-          <li key={item[itemId]}>{renderFunction(item)}</li>
+          <li key={item[itemId]}>
+            {renderFunction?.(item) || defaultRenderFunction(item)}
+          </li>
         ))}
       </ol>
     </div>
@@ -29,7 +33,7 @@ List.propTypes = {
     })
   ).isRequired,
   noItemsMsg: PropTypes.string,
-  renderFunction: PropTypes.func.isRequired,
+  renderFunction: PropTypes.func,
   itemId: PropTypes.string,
 };
 
