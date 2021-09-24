@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`List component tests matches snapshot with empty elements list 1`] = `
+<div
+  data-testid="no-items-container"
+>
+  No elements
+</div>
+`;
+
+exports[`List component tests matches snapshot with mocked elements list 1`] = `
+<div
+  data-testid="list-container"
+>
+  <ol
+    data-testid="list"
+  >
+    <li
+      data-testid="li-0"
+    >
+      <span>
+        {"id":0,"name":"item1"}
+      </span>
+    </li>
+    <li
+      data-testid="li-1"
+    >
+      <span>
+        {"id":1,"name":"item2"}
+      </span>
+    </li>
+  </ol>
+</div>
+`;

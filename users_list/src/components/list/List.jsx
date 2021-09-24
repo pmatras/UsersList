@@ -12,17 +12,17 @@ const List = ({
   itemId = 'id',
 }) => {
   return items?.length ? (
-    <div>
-      <ol>
+    <div data-testid="list-container">
+      <ol data-testid="list">
         {items.map((item) => (
-          <li key={item[itemId]}>
+          <li key={item[itemId]} data-testid={`li-${item[itemId]}`}>
             {renderFunction?.(item) || defaultRenderFunction(item)}
           </li>
         ))}
       </ol>
     </div>
   ) : (
-    <div>{noItemsMsg}</div>
+    <div data-testid="no-items-container">{noItemsMsg}</div>
   );
 };
 
