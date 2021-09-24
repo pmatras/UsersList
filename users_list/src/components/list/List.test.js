@@ -56,6 +56,40 @@ describe('List component tests', () => {
     expect(getByTestId('no-items-container')).toHaveTextContent(noItemsMsg);
   });
 
+  it(`uses properly default id prop of list's element`, () => {
+    const items = [
+      {
+        id: 0,
+        name: 'item1',
+      },
+      {
+        id: 1,
+        name: 'item2',
+      },
+    ];
+    const { getByTestId } = render(<List items={items} />);
+    expect(getByTestId('li-0')).toBeInTheDocument();
+    expect(getByTestId('li-1')).toBeInTheDocument();
+  });
+
+  it(`uses properly custom id prop of list's element`, () => {
+    const items = [
+      {
+        elementNumber: 0,
+        name: 'item1',
+      },
+      {
+        elementNumber: 1,
+        name: 'item2',
+      },
+    ];
+    const { getByTestId } = render(
+      <List items={items} itemId="elementNumber" />
+    );
+    expect(getByTestId('li-0')).toBeInTheDocument();
+    expect(getByTestId('li-1')).toBeInTheDocument();
+  });
+
   it('matches snapshot with mocked elements list', () => {
     const items = [
       {
