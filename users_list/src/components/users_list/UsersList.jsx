@@ -34,7 +34,7 @@ const UsersList = ({ searchText, loadingMsg = 'Loading...' }) => {
   };
 
   if (isLoading) {
-    return <div>{loadingMsg}</div>;
+    return <div data-testid='loading-container'>{loadingMsg}</div>;
   }
 
   const usersList =
