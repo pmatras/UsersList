@@ -9,7 +9,7 @@ const MainView = () => {
   const [queryText, setQueryText] = useState('');
 
   return (
-    <div className='main-container'>
+    <div className='main-container' data-testid='app-container'>
       <h1>Users List</h1>
       <SearchBar
         value={queryText}
